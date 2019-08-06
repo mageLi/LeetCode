@@ -1,5 +1,3 @@
-import java.util.Map;
-
 /*
  * @lc app=leetcode id=1 lang=java
  *
@@ -42,3 +40,4 @@ class Solution {
         return new int[2];
     }
 }
+
