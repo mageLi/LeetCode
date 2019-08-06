@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 /*
  * @lc app=leetcode id=7 lang=java
  *
@@ -43,7 +46,7 @@
  * integer overflows.
  * 
  */
-class Solution {
+class Solution7 {
     public int reverse(int x) {
         boolean flag = false;
         if (x == Integer.MIN_VALUE)

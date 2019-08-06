@@ -49,9 +49,24 @@
  * 
  * 
  */
-class Solution {
+class Solution3 {
     public int lengthOfLongestSubstring(String s) {
-        
+        Map<Character, Integer> map = new HashMap<>();
+        int len = 0, counter = 0, end = 0, begin = 0;
+        while (end < s.length()) {
+            char c = s.charAt(end++);
+            map.put(c, map.getOrDefault(c, 0) + 1); 
+            if (map.get(c) == 2) {
+                counter++;
+            } 
+            while (counter != 0) {
+                char temp = s.charAt(begin++);
+                map.put(temp, map.get(temp) - 1);
+                if (map.get(temp) == 1) counter--;
+            }
+            len = Math.max(len, end - begin);
+        }
+        return len;
     }
 }
 
